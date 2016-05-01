@@ -11,6 +11,7 @@ layer1 = Gadfly.layer(mf, x=:CM_X, y=:CM_Y, group=:NAME, Theme(default_color=col
                       Geom.polygon(preserve_order=true, fill=false)) # preserve_order ensures the points are traced in order. 
 
 Gadfly.plot(layer1, Coord.cartesian(fixed=true)) # Coord.cartesian: Prevents the map from being stretched out.
+Gadfly.plot(layer1,layer2)
 
 # Adding a second layer
 center_x = -1.33e7
